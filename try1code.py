@@ -3,7 +3,7 @@ import requests
 
 def try_combination(combination):
     # Fill in the actual URL here
-    base_url = "http://your_server/your_path/flag.php"
+    base_url = "http://10.0.0.6/ctf_deploy/aclive/ddjS7HkE9M/A.php"
     
     # Map parameters to their values in the combination
     params = {param: str(value).lower() for param, value in zip(parameters, combination)}
@@ -17,12 +17,7 @@ def try_combination(combination):
     return response.text
 
 # List of parameters to be tested
-parameters = ["OSA",
-    "OSB",
-    "OSC",
-    "HSA",
-    "HSB",
-    "HSD"]
+parameters = ["OSA","OSB","OSC","HSA","HSB","HSD"]
 
 # Generate all possible combinations of True and False for the parameters
 combinations = list(itertools.product([True, False], repeat=len(parameters)))
